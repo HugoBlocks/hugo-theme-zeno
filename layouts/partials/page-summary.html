@@ -2,7 +2,7 @@
     <div itemscope itemtype="http://schema.org/CreativeWork" class="card {{ .Section }}">
         <a class="post-link" href="{{ .Permalink }}">
             {{ if .Params.cover }}
-            <img class="card-img-top" src="{{ .Site.BaseURL }}{{ .Params.cover }}" alt="a-nice-cover"/>
+            <img class="card-img-top" src="{{ .Params.cover }}" alt="a-nice-cover"/>
             {{ end }}
             <div class="card-body">
                 <h2 itemprop="headline" class="card-title">{{ .Title }}</h2>
