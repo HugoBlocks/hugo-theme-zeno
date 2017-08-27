@@ -1,0 +1,18 @@
+<div class="row post-list">
+    {{ range .Paginator.Pages.ByDate.Reverse }}
+    {{ partial "page-summary.html" . }}
+    {{ end }}
+</div>
+
+<nav class="my-pagination">
+    {{ if .Paginator.HasPrev }}
+    <a class="pill outline pagination-previous" href="{{ .Paginator.Prev.URL }}">← Previous</a>
+    {{ end }}
+
+    <a href="" class="pill outline">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</a>
+
+    {{ if .Paginator.HasNext }}
+    <a class="pill outline pagination-next" href="{{ .Paginator.Next.URL }}">Next →</a>
+    {{ end }}
+</nav>
+

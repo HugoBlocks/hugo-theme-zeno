@@ -1,0 +1,20 @@
+name = "Zeno"
+license = "MIT"
+
+#licenselink = "https://github.com/allnightgrocery/hugo-theme-blueberry-detox/blob/master/LICENSE"
+#description = "Detox is a beautiful theme, originally designed by Jordan Bowman (@jrdnbwmn)."
+#homepage = "https://github.com/allnightgrocery/hugo-theme-blueberry-detox"
+#tags = ["blog", "minimal", "ghost", "white"]
+#features = ["blog", "disqus", "google analytics", "pagination", "rss", "sharing options"]
+#min_version = 0.14
+
+[params]
+SEOTitle = "My HTML Title for SEO"
+
+[taxonomies]
+tag = "tags"
+
+[author]
+name = "My Author Name"
+homepage = "My Author Homepage"
+

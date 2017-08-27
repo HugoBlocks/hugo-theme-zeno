@@ -1,0 +1,325 @@
+html {
+    background: url(/medias/triangles-banner.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    color: #222;
+    font-family: 'Cardo', serif;
+    font-size: 1.3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Monserrat', sans-serif;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+    color: #222;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 50rem;
+}
+
+/* Cards */
+.post-list {
+}
+
+.post-list .col-md-6 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.card.posts {
+    height: 100%;
+
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    transition: all linear 0.2s;
+}
+
+.card.posts h2 {
+    font-size: 1.2em;
+}
+
+.card.posts:hover {
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+    transition: all linear 0.2s;
+}
+
+.card a.post-link {
+    text-decoration: none;
+    color: #222;
+}
+
+.card a.post-link:hover {
+    color: #5946a7;
+}
+
+.card.posts .card-text {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.card.posts .infos {
+    text-align: center;
+}
+
+.card.posts .card-text {
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+/* Header */
+.blog-header {
+}
+
+.blog-header nav {
+    font-family: 'Monserrat', sans-serif;
+}
+
+/* Nav links */
+.nav-link {
+    position: relative;
+    padding: 1rem;
+
+    opacity: 0.7;
+    color: #222;
+    font-weight: 400;
+    text-decoration: none;
+
+    transition: all linear 0.2s;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    font-weight: 400;
+    opacity: 1;
+    color: #5946a7;
+    background-color: transparent;
+    transition: all linear 0.2s;
+}
+
+/* Cover */
+.hero {
+    margin-bottom: 3rem;
+    border-top: 1px solid #f3f3f3;
+    border-bottom: 1px solid #eee;
+    padding: 0.2em 0 0.2em 0;
+    background-color: #f9f9f9;
+}
+
+.post-title {
+    margin-top: 3rem;
+}
+
+.post-cover {
+}
+
+.post-content {
+    line-height: 1.58;
+    font-weight: 200;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.post-content h1, .post-content h2, .post-content h3, .post-content h4 {
+    margin-top: 2em;
+    font-weight: 700;
+}
+
+.post-content p {
+    margin-bottom: 1.7rem;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.site-footer {
+    margin-top: 2em;
+    padding: 5rem 0 15px 0;
+    color: #FBFCFD;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    background: url(/medias/triangles-banner.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.site-footer p {
+    font-size: 0.7em;
+}
+
+.site-footer a {
+    color: #BBC7CC;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.site-footer a:hover, .site-footer a:visited:hover {
+    color: #42C94F;
+}
+
+.site-footer .ads {
+    font-family: 'Monserrat', sans-serif;
+    font-size: 2em;
+}
+
+.site-footer .technicalities {
+    font-family: 'Monserrat', sans-serif;
+}
+
+.container-author {
+    border-top: 1px solid #f3f3f3;
+    background-color: #f9f9f9;
+    padding: 0.2em 0 0.2em 0;
+    margin: 1em 0 1em 0;
+    border-bottom: 1px solid #eee;
+}
+
+.post-author {
+    font-size: 0.8em;
+    margin-bottom: 3em;
+    margin-top: 3em;
+}
+
+.author-pic {
+    text-align: center;
+}
+
+.author-pic img {
+    border-radius: 50%;
+}
+
+.author-info {
+
+}
+
+h4.header-info {
+    color: #c9c9c9;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.text-dark {
+    color: #222;
+}
+
+.author-info .author-name {
+    color: #403f3f;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Monserrat', sans-serif;
+}
+
+.author-info .author-bio {
+    color: #a9a9a9;
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+}
+
+.author-info .author-website a {
+    font-style: italic;
+    font-weight: 400;
+    color: #a9a9a9;
+}
+
+.post-info {
+    font-family: 'Monserrat', sans-serif;
+}
+
+h4.info-published {
+    margin-bottom: 1em;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+h4.info-tags {
+    margin-bottom: 1em;
+    line-height: 1.5em;
+    font-size: 0.9em;
+}
+
+.my-pagination {
+    width: 100%;
+    text-align: center;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 0.7em;
+    margin-top: 3em;
+}
+
+.my-pagination .pill {
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+}
+
+.my-pagination a.pill,
+.my-pagination a.pill:visited {
+    color: #7F70BF;
+    border: 2px solid #7F70BF;
+    text-decoration: none;
+    transition: all linear 0.2s;
+}
+
+.my-pagination a.pill:hover {
+    color: #42c94f;
+    border: 2px solid #42c94f;
+    transition: all linear 0.2s;
+}
+
+.post-author .social {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.post-author .social a,
+.post-author .social a:visited {
+    text-decoration: none;
+    margin: 0.3em;
+    transition: all linear 0.2s;
+}
+
+.post-author .social a:active,
+.post-author .social a:hover,
+.post-author .social a:focus {
+    color: #5946a7;
+    font-weight: 400;
+    transition: all linear 0.2s;
+}
+
+.post-share {
+    text-align: center;
+}
+
+.post-share h5 {
+    color: #BBC7CC;
+}
+
+.post-share a {
+    font-size: 2.2rem;
+    display: inline-block;
+    margin: 1rem 1.0rem 1.6rem 1.0rem;
+    color: #BBC7CC;
+    text-decoration: none;
+}
+
+.post-share a:hover {
+    color: #50585D;
+}

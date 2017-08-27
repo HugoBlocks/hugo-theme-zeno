@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="{{ if .Params.LanguageCode }}{{ .Params.LanguageCode }}{{ else }}{{ .Site.LanguageCode }}{{ end }}">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    {{ with .Params.SEODescription }}
+    <meta name="description" content="{{ . }}">
+    {{ end }}
+
+    {{ with .Params.SEOKeywords }}
+    <meta name="keywords" content="{{ range $i, $e := . }}{{- if $i }},{{ end }}{{ $e }}{{ end }}">
+    {{ end }}
+
+    <meta property="og:url" content="{{ .Permalink }}"/>
+
+    {{ if eq .Kind "page" }}
+    <meta property="og:type" content="article"/>
+    <meta name="twitter:card" content="summary"/>
+    {{ end }}
+
+    {{ with .Site.Author.twitter }}
+    <meta name="twitter:site" content="@{{ . }}"/>
+    {{ end }}
+
+    {{ if .Title }}
+    <meta property="og:title" content="{{ .Title }}"/>
+    <meta name="twitter:title" content="{{ .Title }}"/>
+    {{ else }}
+    <meta property="og:title" content="{{ .Site.Title }}"/>
+    <meta name="twitter:title" content="{{ .Site.Title }}"/>
+    {{ end }}
+
+    {{ with .Params.SEODescription | default .Description }}
+    <meta property="og:description" content="{{ . }}"/>
+    <meta name="twitter:description" content="{{ . }}"/>
+    {{ end }}
+
+    {{ if .Params.cover }}
+    <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.cover }}"/>
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.cover }}"/>
+    {{ else if .Site.Author.image }}
+    <meta property="og:image" content="{{ .Site.Author.image }}"/>
+    <meta name="twitter:image" content="{{ .Site.Author.image }}"/>
+    {{ end }}
+
+    {{ template "_internal/google_analytics.html" . }}
+
+
+    <!-- Page Title -->
+    <title>
+        {{- block "title" . -}}
+        {{ .Params.SEOTitle | default .Page.Title }} -
+        {{ .Site.Params.SEOTitle | default .Site.Title }}
+        {{- end -}}
+    </title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/zeno.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/8c20bc1784.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,400i,700|Montserrat" rel="stylesheet">
+</head>
+<body>
+{{ partial "header" . }}
+{{ block "main" . }}{{ end }}
+{{ partial "footer" . }}
+
+{{ if ne .Kind "404" }}
+{{/*
+<div class="suspension">
+    <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
+    {{ if and (eq .Type "post") (eq .Kind "page") }}
+    {{ if .Site.Params.changyan }}
+    <a title="Go to comments" class="to-comment" href="#SOHUCS"><span class="icon icon-comment"></span></a>
+    {{ else if .Site.DisqusShortname }}
+    <a title="Go to comments" class="to-comment" href="#disqus_thread"><span class="icon icon-comment"></span></a>
+    {{ else }}{{ end }}
+    {{ end }}
+</div>
+*/}}
+
+{{ end }}
+</body>
+</html>
