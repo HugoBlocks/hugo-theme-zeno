@@ -1,127 +1,246 @@
 html {
-    background: url(/medias/triangles-banner.png) no-repeat center center fixed;
+    background: url(/brand/footer_banner.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    width: 98%;
 }
 
 body {
+    width: 98%;
+    margin: auto;
+
+    font-size: 1.2em;
+    font-family: 'PT Serif', serif;
     color: #222;
-    font-family: 'Cardo', serif;
-    font-size: 1.3em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Monserrat', sans-serif;
+    color: #222;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+strong {
+    font-weight: 700;
 }
 
 a,
 a:hover,
 a:focus,
 a:visited {
-    color: #222;
-    font-weight: 700;
+    color: #2daf10;
+    font-weight: 400;
     text-decoration: underline;
+}
+
+.btn-outline-primary,
+.btn-outline-primary:visited {
+    color: #2daf10;
+    border-color: #2daf10;
+    text-decoration: none;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    color: #fff;
+    background-color: #2daf10;
+    border-color: #2daf10;
+    text-decoration: none;
+}
+
+.pill {
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+}
+
+a.pill,
+a.pill:visited {
+    color: #2daf10;
+    border: 2px solid #2daf10;
+    text-decoration: none;
+    transition: all linear 0.2s;
+}
+
+a.pill:hover {
+    color: #fff;
+    background-color: #2daf10;
+    transition: all linear 0.2s;
 }
 
 .container {
     max-width: 50rem;
 }
 
-/* Cards */
-.post-list {
-}
-
-.post-list .col-md-6 {
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-.card.posts {
-    height: 100%;
-
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-    transition: all linear 0.2s;
-}
-
-.card.posts h2 {
-    font-size: 1.2em;
-}
-
-.card.posts:hover {
-    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
-    transition: all linear 0.2s;
-}
-
-.card a.post-link {
-    text-decoration: none;
-    color: #222;
-}
-
-.card a.post-link:hover {
-    color: #5946a7;
-}
-
-.card.posts .card-text {
-    color: rgba(0, 0, 0, 0.6);
-}
-
-.card.posts .infos {
-    text-align: center;
-}
-
-.card.posts .card-text {
-    font-size: 0.8em;
-    font-weight: 400;
-}
-
-/* Header */
+/*
+Header
+------
+*/
 .blog-header {
 }
 
 .blog-header nav {
-    font-family: 'Monserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* Nav links */
-.nav-link {
+a.nav-link,
+a.nav-link:visited {
     position: relative;
     padding: 1rem;
 
-    opacity: 0.7;
     color: #222;
     font-weight: 400;
     text-decoration: none;
 
-    transition: all linear 0.2s;
+    transition: all linear 0.1s;
 }
 
-.nav-link:hover,
-.nav-link:focus {
+a.nav-link:hover,
+a.nav-link:focus,
+a.nav-link:active {
     font-weight: 400;
-    opacity: 1;
-    color: #5946a7;
-    background-color: transparent;
-    transition: all linear 0.2s;
+    color: #2daf10;
+    text-decoration: none;
+
+    transition: all linear 0.1s;
 }
 
-/* Cover */
+/*
+Hero
+----
+*/
 .hero {
     margin-bottom: 3rem;
     border-top: 1px solid #f3f3f3;
     border-bottom: 1px solid #eee;
-    padding: 0.2em 0 0.2em 0;
+    padding: 3em 0 0.2em 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p.description {
+    max-width: 740px;
+    font-size: 21px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.5);
+    padding-top: 28px;
+    margin: 28px auto 0;
+    position: relative;
+}
+
+.hero p.description:before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 3px;
+    top: 0;
+    left: 50%;
+    margin-left: -20px;
+    background: #2daf10;
+}
+
+/*
+Headers Tools
+-------------
+ */
+h4.header-info {
+    color: #c9c9c9;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+h4.header-info-value {
+    color: #8d8f91;
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.top-1 {
+    margin-top: 1em;
+}
+
+/*
+Social
+------
+ */
+
+.social {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.social a,
+.social a:visited {
+    margin: 0.3em;
+    text-decoration: none;
+    transition: all linear 0.1s;
+}
+
+.social a:active,
+.social a:hover,
+.social a:focus {
+    color: #81e86b;
+    font-weight: 400;
+    transition: all linear 0.1s;
+}
+
+/* Post Lists */
+.post-item {
+    text-align: center;
+    padding: 2em 0 2em 0;
+}
+
+.post-item.even {
+    background-color: #fff;
+}
+
+.post-item.odd {
     background-color: #f9f9f9;
 }
 
+.post-item .post-body h2 {
+    font-size: 1.4em;
+}
+
+.post-item h2 a.post-link,
+.post-item h2 a.post-link:visited {
+    text-decoration: none;
+    transition: all linear 0.1s;
+}
+
+.post-item h2 a.post-link:hover,
+.post-item h2 a.post-link:focus,
+h2 a.post-link:active {
+    color: #222;
+    text-decoration: none;
+    transition: all linear 0.2s;
+}
+
+.post-item .post-text {
+    color: #222;
+}
+
+.post-item .post-body {
+    margin-top: 1rem;
+}
+
 .post-title {
-    margin-top: 3rem;
+    margin-top: 2em;
 }
 
 .post-cover {
+    height: 80vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .post-content {
@@ -132,20 +251,6 @@ a:visited {
 .post-content img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 1em;
-}
-
-.post-content h1, .post-content h2, .post-content h3, .post-content h4 {
-    margin-top: 2em;
-    font-weight: 700;
-}
-
-.post-content p {
-    margin-bottom: 1.7rem;
-}
-
-strong {
-    font-weight: 700;
 }
 
 .site-footer {
@@ -175,13 +280,18 @@ strong {
     color: #42C94F;
 }
 
-.site-footer .ads {
-    font-family: 'Monserrat', sans-serif;
-    font-size: 2em;
+.site-footer .branding {
+    font-size: 1em;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.site-footer .branding a {
+    margin: 0 1em 0 1em;
+    font-weight: 400;
 }
 
 .site-footer .technicalities {
-    font-family: 'Monserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .container-author {
@@ -210,14 +320,6 @@ strong {
 
 }
 
-h4.header-info {
-    color: #c9c9c9;
-    text-transform: uppercase;
-    font-size: 0.8em;
-    letter-spacing: 1px;
-    margin-bottom: 0;
-}
-
 .text-dark {
     color: #222;
 }
@@ -226,7 +328,7 @@ h4.header-info {
     color: #403f3f;
     text-decoration: none;
     font-weight: 700;
-    font-family: 'Monserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .author-info .author-bio {
@@ -242,66 +344,25 @@ h4.header-info {
 }
 
 .post-info {
-    font-family: 'Monserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
-h4.info-published {
+h4.header-info-value {
     margin-bottom: 1em;
-    font-size: 0.9em;
-    font-weight: 700;
+    font-size: 1.2em;
+    font-weight: 400;
 }
 
 h4.info-tags {
-    margin-bottom: 1em;
     line-height: 1.5em;
-    font-size: 0.9em;
 }
 
 .my-pagination {
     width: 100%;
     text-align: center;
-    font-family: 'Monserrat', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 0.7em;
     margin-top: 3em;
-}
-
-.my-pagination .pill {
-    border-radius: 15px;
-    padding: 5px 10px 5px 10px;
-}
-
-.my-pagination a.pill,
-.my-pagination a.pill:visited {
-    color: #7F70BF;
-    border: 2px solid #7F70BF;
-    text-decoration: none;
-    transition: all linear 0.2s;
-}
-
-.my-pagination a.pill:hover {
-    color: #42c94f;
-    border: 2px solid #42c94f;
-    transition: all linear 0.2s;
-}
-
-.post-author .social {
-    font-size: 1.4em;
-    text-align: center;
-}
-
-.post-author .social a,
-.post-author .social a:visited {
-    text-decoration: none;
-    margin: 0.3em;
-    transition: all linear 0.2s;
-}
-
-.post-author .social a:active,
-.post-author .social a:hover,
-.post-author .social a:focus {
-    color: #5946a7;
-    font-weight: 400;
-    transition: all linear 0.2s;
 }
 
 .post-share {

@@ -1,8 +1,8 @@
-<div class="row post-list">
-    {{ range .Paginator.Pages.ByDate.Reverse }}
+{{ range $i, $e := .Paginator.Pages.ByDate.Reverse }}
+<div class="post-item row justify-content-center {{ if modBool $i 2 }}even{{ else }}odd{{ end }}">
     {{ partial "page-summary.html" . }}
-    {{ end }}
 </div>
+{{ end }}
 
 <nav class="my-pagination">
     {{ if .Paginator.HasPrev }}

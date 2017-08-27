@@ -1,3 +1,4 @@
 {{ if .Params.cover }}
-<img class="img-fluid post-cover" src="{{ .Site.BaseURL }}{{ .Params.cover }}" alt="{{ .Params.cover }}" />
+<div class="post-cover" style="background-image: url('{{ .Site.BaseURL }}{{ .Params.cover }}');">
+</div>
 {{ end }}

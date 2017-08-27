@@ -1,19 +1,19 @@
 {{ $author := .Site.Author }}
 
 <div class="container-fluid je-ne-suis-pas-un hero">
-    <div itemprop="author" itemscope="" itemtype="http://schema.org/Person"
-         class="row justify-content-center post-author">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            {{ if .Site.Params.heroTitle }}
+            <h1>{{ .Site.Params.heroTitle }}</h1>
+            {{ end }}
 
-        <div class="col-md-2 author-pic">
-            <img itemprop="image" src="{{ $author.image }}"/>
-        </div>
-        <div class="col-md-6 author-info">
-            <h1>Welcome, Bienvenue.</h1>
-            <p class="description text-muted">
-                {{ $author.intro }}
+            {{ if .Site.Params.description}}
+            <p class="description">
+                {{ .Site.Params.description }}
             </p>
+            {{ end }}
 
-            <h4 class="header-info">Reach out to me:</h4>
+            <h4 class="header-info top-1">Connect with us:</h4>
             <p class="social">
                 {{ with $author.github }}
                 <a class="fa fa-github" href="http://github.com/{{ . }}"></a>
@@ -34,8 +34,6 @@
                 <a class="fa fa-rss" href="{{ . }}"></a>
                 {{ end }}
             </p>
-
         </div>
     </div>
-</div>
 </div>
