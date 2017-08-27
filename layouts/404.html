@@ -1,15 +1,28 @@
 {{ define "main" }}
-{{ partial "cover-not-found" . }}
+{{ $author := .Site.Author }}
 
+{{ partial "cover" . }}
 
-<div class="container">
+<div class="container-fluid">
     <section class="main">
-        <h2>Last Articles:</h2>
-        <div class="row post-list">
-            {{ range first 4 (where .Site.Pages "Section" "posts") }}
-            {{ partial "page-summary.html" . }}
-            {{ end }}
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1>404 - Not Found</h1>
+
+                <p class="description text-muted">
+                    The content you are looking for may be gone,
+                    please reach out to us! You can also take a look at my other articles
+                    by going back to the <a href="{{ .Site.BaseURL }}">home page</a>.
+                </p>
+            </div>
         </div>
+
+        {{ range $i, $2 := first 1 (where .Site.Pages "Section" "posts") }}
+        <div class="post-item row justify-content-center odd">
+            <h3>Our Last Article:</h3>
+            {{ partial "page-summary.html" . }}
+        </div>
+        {{ end }}
     </section>
 </div>
 {{ end }}

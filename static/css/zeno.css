@@ -255,7 +255,6 @@ h2 a.post-link:active {
 }
 
 .site-footer {
-    margin-top: 2em;
     padding: 5rem 0 15px 0;
     color: #FBFCFD;
     border-top: 1px solid #e5e5e5;
@@ -363,7 +362,7 @@ h4.info-tags {
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 0.7em;
-    margin-top: 3em;
+    margin: 3em 0 2em 0;
 }
 
 .post-share {
