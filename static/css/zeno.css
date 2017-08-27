@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #222;
     font-weight: 700;
     font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
 }
 
 strong {
@@ -231,7 +232,7 @@ h2 a.post-link:active {
     margin-top: 1rem;
 }
 
-.post-title {
+.single .post-title {
     margin-top: 2em;
 }
 
