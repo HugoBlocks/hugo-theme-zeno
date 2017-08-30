@@ -3,40 +3,18 @@
 <div class="container-fluid je-ne-suis-pas-un hero">
     <div class="row">
         <div class="col-md-12 text-center">
-            {{ if .Site.Params.heroTitle }}
-            <h1>{{ .Site.Params.heroTitle }}</h1>
+            {{ with .Site.Params.heroTitle }}
+            <h1>{{ . }}</h1>
             {{ end }}
 
-            {{ if .Site.Params.description}}
+            {{ with .Site.Params.description}}
             <p class="description">
-                {{ .Site.Params.description }}
+                {{ . }}
             </p>
             {{ end }}
 
             <h4 class="header-info top-1">Connect with us:</h4>
-            <p class="social">
-                {{ with $author.github }}
-                <a class="fa fa-github" href="https://github.com/{{ . }}"></a>
-                {{ end }}
-                {{ with $author.linkedin }}
-                <a class="fa fa-linkedin" href="https://www.linkedin.com/in/{{ . }}"></a>
-                {{ end }}
-                {{ with $author.twitter }}
-                <a class="fa fa-twitter" href="https://twitter.com/{{ . }}"></a>
-                {{ end }}
-                {{ with $author.facebook }}
-                <a class="fa fa-facebook" href="https://facebook.com/{{ . }}"></a>
-                {{ end }}
-                {{ with $author.angellist }}
-                <a class="fa fa-angellist" href="https://angel.co/{{ . }}"></a>
-                {{ end }}
-                {{ with $author.homepage }}
-                <a class="fa fa-user" href="{{ . }}"></a>
-                {{ end }}
-                {{ with $author.rss }}
-                <a class="fa fa-rss" href="{{ . }}" type="application/rss+xml" target="_blank"></a>
-                {{ end }}
-            </p>
+            {{ partial "social" $author }}
         </div>
     </div>
 </div>

@@ -1,0 +1,8 @@
+{{ if .IsTranslated }}
+{{ range .Translations }}
+<a class="nav-link translation" href="{{ .Permalink }}">
+    <i class="nav-item ml-auto fa fa-globe" aria-hidden="true"></i>
+    {{ i18n .Lang }}
+</a>
+{{ end}}
+{{ end }}

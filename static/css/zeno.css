@@ -86,6 +86,14 @@ Header
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.blog-header .translation {
+    opacity: 0.3;
+}
+
+.blog-header .translation:hover {
+    opacity: 1;
+}
+
 /* Nav links */
 a.nav-link,
 a.nav-link:visited {

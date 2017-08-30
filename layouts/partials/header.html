@@ -1,6 +1,6 @@
 <div class="blog-header">
     <div class="container">
-        <nav class="nav">
+        <nav class="navbar">
             <a class="navbar-brand" href="{{ .Site.Params.motherURL }}">
                 <img src="/brand/logo_small.png" height="42" class="d-inline-block align-top" alt="">
             </a>
@@ -9,6 +9,8 @@
             {{ range .Site.Menus.main }}
             <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
             {{ end }}
+
+            {{ partial "i18n-switch" . }}
         </nav>
     </div>
 </div>

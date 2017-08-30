@@ -1,0 +1,23 @@
+<p class="social">
+    {{ with .github }}
+    <a class="fa fa-github" href="https://github.com/{{ . }}"></a>
+    {{ end }}
+    {{ with .linkedin }}
+    <a class="fa fa-linkedin" href="https://www.linkedin.com/in/{{ . }}"></a>
+    {{ end }}
+    {{ with .twitter }}
+    <a class="fa fa-twitter" href="https://twitter.com/{{ . }}"></a>
+    {{ end }}
+    {{ with .facebook }}
+    <a class="fa fa-facebook" href="https://facebook.com/{{ . }}"></a>
+    {{ end }}
+    {{ with .angellist }}
+    <a class="fa fa-angellist" href="https://angel.co/{{ . }}"></a>
+    {{ end }}
+    {{ with .homepage }}
+    <a class="fa fa-user" href="{{ . }}"></a>
+    {{ end }}
+    {{ with .rss }}
+    <a class="fa fa-rss" href="{{ . }}" type="application/rss+xml" target="_blank"></a>
+    {{ end }}
+</p>
