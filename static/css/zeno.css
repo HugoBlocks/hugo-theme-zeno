@@ -94,16 +94,26 @@ Header
     opacity: 1;
 }
 
+.navbar-toggler {
+    border: 1px solid #eee;
+    margin-top: 0.5rem;
+}
+
+.navbar-brand {
+    margin-right: 50px;
+}
+
+.navbar-nav {
+}
+
 /* Nav links */
 a.nav-link,
 a.nav-link:visited {
-    position: relative;
+    margin-right: 50px;
     padding: 1rem;
-
     color: #222;
     font-weight: 400;
     text-decoration: none;
-
     transition: all linear 0.1s;
 }
 
@@ -113,7 +123,6 @@ a.nav-link:active {
     font-weight: 400;
     color: #2daf10;
     text-decoration: none;
-
     transition: all linear 0.1s;
 }
 
@@ -245,7 +254,7 @@ h2 a.post-link:active {
 }
 
 .post-cover {
-    height: 80vh;
+    height: 70vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -257,9 +266,38 @@ h2 a.post-link:active {
     font-weight: 200;
 }
 
+.single .row,
+.container-author .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .post-content img {
     max-width: 100%;
     height: auto;
+}
+
+.post-content h2 {
+    margin-top: 0.78em;
+    margin-bottom: 0.3em;
+}
+
+.post-content ol {
+    display: block;
+    width: 100%;
+}
+
+.post-content p {
+    width: 100%;
+}
+
+.post-content pre {
+    width: 100%;
+    background-color: #1b1e21;
+    color: #2daf10;
+    border: 1px solid #222;
+    border-radius: 0.9em;
+    padding: 1em;
 }
 
 .site-footer {
