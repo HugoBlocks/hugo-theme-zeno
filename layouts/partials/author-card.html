@@ -35,7 +35,7 @@
             <span itemprop="keywords" class="tags-list">
                     {{ range $i, $e := . }}
                     {{- if $i }},{{ end }}
-                    <a class="" href="{{ "tags/" | absURL }}{{ . | urlize }}">{{- $e }}</a>
+                    <a class="" href="{{ $.Site.LanguagePrefix }}/tags/{{ . | urlize }}">{{- $e }}</a>
                 {{- end -}}
             </span>
         </h4>
