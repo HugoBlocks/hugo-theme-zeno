@@ -47,6 +47,12 @@
     <meta name="twitter:image" content="{{ .Site.Author.image }}"/>
     {{ end }}
 
+    {{ if .IsTranslated }}
+    {{ range .Translations }}
+    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}"/>
+    {{ end}}
+    {{ end }}
+
     {{ template "_internal/google_analytics.html" . }}
 
 
