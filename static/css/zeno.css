@@ -300,6 +300,13 @@ h2 a.post-link:active {
     padding: 1em;
 }
 
+.post-content blockquote {
+    width: 80%;
+    margin: auto;
+    display: inline-block;
+    color: #5d5d5d;
+}
+
 .site-footer {
     padding: 5rem 0 15px 0;
     color: #FBFCFD;
@@ -429,4 +436,26 @@ h4.info-tags {
 
 .post-share a:hover {
     color: #50585D;
+}
+
+/* Mailchimp */
+#mc_embed_signup {
+    background: #f9f9f9;
+    border-radius: 1em;
+    padding: 1em;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    border: 1px solid #f3f3f3;
+}
+
+#mc_embed_signup .subscribe-button {
+    text-align: center;
+}
+
+#mc_embed_signup h4 {
+    text-align: left;
+    color: #ABABAB;
+    font-size: 1.2em;
+    padding: 1em;
+    font-weight: 500;
 }

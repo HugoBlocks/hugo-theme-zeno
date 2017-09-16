@@ -3,3 +3,30 @@ other = "english"
 
 [fr]
 other = "Francais"
+
+[readmore]
+other = "Read More"
+
+[subscribe_header]
+other = "Subscribe to our mailing list"
+
+[field_firstname]
+other = "First Name"
+
+[field_email]
+other = "Email Address"
+
+[ml_description]
+other = "Subscribe to receive our next articles, examples & guides about blockchain and distributed systems."
+
+[ml_subscribe]
+other = "Subscribe"
+
+[with_the_tags]
+other = "With the tags"
+
+[published_on]
+other = "Published on"
+
+[written_by]
+other = "Written by"

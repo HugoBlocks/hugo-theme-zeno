@@ -55,25 +55,29 @@
 
     {{ template "_internal/google_analytics.html" . }}
 
-
     <!-- Page Title -->
     <title>
         {{- block "title" . -}}
-        {{ .Params.SEOTitle | default .Page.Title }} -
-        {{ .Site.Params.SEOTitle | default .Site.Title }}
+        {{ .Params.SEOTitle | default .Title }} -
+        {{ .Site.Title }}
         {{- end -}}
     </title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/zeno.css">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/{{ .Site.Params.fontAwesomeID }}.css">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700|Roboto+Condensed:400,700"
           rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/{{ .Site.Params.fontAwesomeID }}.css">
+
+    <link rel="stylesheet" href="/css/zeno.css">
+
+
 </head>
 <body>
 {{ partial "header" . }}
+
 {{ block "main" . }}{{ end }}
 {{ partial "footer" . }}
 </body>

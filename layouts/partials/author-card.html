@@ -11,7 +11,7 @@
         <img itemprop="image" src="{{ $author.image }}"/>
     </div>
     <div class="col-md-8 author-info">
-        <h4 class="header-info">Written By</h4>
+        <h4 class="header-info">{{ i18n "written_by" }}</h4>
 
         <a href="{{ $author.homepage }}" itemprop="url" class="author-name">
             <span itemprop="name">{{ $author.name }}</span>
@@ -23,14 +23,14 @@
             <a href="{{ $author.homepage }}" rel="nofollow">{{ $author.homepage }}</a>
         </p>
 
-        <h4 class="header-info text-dark">Published on</h4>
+        <h4 class="header-info text-dark">{{ i18n "published_on" }}</h4>
         <h4 class="info-published header-info-value">
             <time itemprop="datePublished" class="post-date">
                 {{ .Date.Format "2 Jan 2006" }}
             </time>
         </h4>
         {{ with .Params.tags }}
-        <h4 class="header-info text-dark">With the tags</h4>
+        <h4 class="header-info text-dark">{{ i18n "with_the_tags" }}</h4>
         <h4 class="info-tags header-info-value">
             <span itemprop="keywords" class="tags-list">
                     {{ range $i, $e := . }}

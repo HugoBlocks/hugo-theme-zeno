@@ -10,7 +10,12 @@
     <div class="row post-content">
         {{ .Content }}
     </div>
+</div>
 
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        {{ partial "subscribe.html" . }}
+    </div>
 </div>
 
 <div class="container-fluid container-author">
@@ -35,14 +40,6 @@
             </a>
         </div>
     </div>
-
-    {{/*
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            {{ partial "subscribe.html" }}
-        </div>
-    </div>
-    */}}
 
     {{ if .Site.DisqusShortname }}
     <div class="row comments">
