@@ -440,6 +440,7 @@ h4.info-tags {
 
 /* Mailchimp */
 #mc_embed_signup {
+    margin-top: 2em;
     background: #f9f9f9;
     border-radius: 1em;
     padding: 1em;

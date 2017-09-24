@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ if .Params.LanguageCode }}{{ .Params.LanguageCode }}{{ else }}{{ .Site.LanguageCode }}{{ end }}">
 <head>
+    {{ partial "google-gtag" . }}
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -53,8 +55,6 @@
     {{ end}}
     {{ end }}
 
-    {{ template "_internal/google_analytics.html" . }}
-
     <!-- Page Title -->
     <title>
         {{- block "title" . -}}
@@ -72,8 +72,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/{{ .Site.Params.fontAwesomeID }}.css">
 
     <link rel="stylesheet" href="/css/zeno.css">
-
-
 </head>
 <body>
 {{ partial "header" . }}
