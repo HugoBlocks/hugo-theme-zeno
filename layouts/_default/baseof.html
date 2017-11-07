@@ -2,6 +2,7 @@
 <html lang="{{ if .Params.LanguageCode }}{{ .Params.LanguageCode }}{{ else }}{{ .Site.LanguageCode }}{{ end }}">
 <head>
     {{ partial "google-gtag" . }}
+    {{ partial "google-tag-a" . }}
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -74,6 +75,7 @@
     <link rel="stylesheet" href="/css/zeno.css">
 </head>
 <body>
+{{ partial "google-tag-b" . }}
 {{ partial "header" . }}
 
 {{ block "main" . }}{{ end }}
