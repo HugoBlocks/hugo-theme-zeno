@@ -1,0 +1,21 @@
+{{ if .Params.features }}
+<div id="features" class="container">
+    <h2 class="text-center">
+        {{ .Params.featuresTitle | safeHTML }}
+    </h2>
+
+    {{ $features := .Params.features }}
+    <div class="list-group">
+        {{ range $i, $e := $features }}
+        {{ $features_count := $e | len }}
+        <a class="list-group-item list-group-item-action"
+           href="{{ .url }}">
+            <h3 class="mb-1">{{ .heading }}</h3>
+            <p class="tagline">{{ .tagline }}</p>
+        </a>
+        {{ end }}
+
+    </div>
+
+</div>
+{{ end }}

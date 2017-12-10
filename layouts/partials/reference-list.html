@@ -1,0 +1,23 @@
+{{ if .Params.references }}
+<div id="references" class="jumbotron light jumbotron-fluid">
+    <div class="container">
+        <h2>{{ .Params.referencesTitle }}</h2>
+        <div class="row align-items-center justify-content-center">
+            {{ $references := .Params.references }}
+
+            {{ range $i, $e := $references }}
+            {{ $references_count := $e | len }}
+            <div class="col-4 col-sm-3 col-md-2">
+                <a href="{{ .url }}" target="_blank">
+                    <img src="{{ .image }}"
+                         alt="icon depicting {{ $e.heading }}"
+                         class="img-fluid"
+                         alt="{{ .name }}"
+                    />
+                </a>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</div>

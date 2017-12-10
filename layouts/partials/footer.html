@@ -1,8 +1,4 @@
-<footer class="site-footer container-fluid">
-    {{ if eq .Page.Kind "page" }}
-    {{ else }}
-    {{ end }}
-    <p class="technicalities">
-    <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> © 2017 on <a href="https://gohugo.io">Hugo</a> &amp; <a href="https://github.com/lsenta/hugo-theme-zeno">Zeno</a> theme.
-    </p>
-</footer>
+<div class="container" id="footer">
+    {{ partial "footer-links" . }}
+    {{ partial "footer-followup" .Params.followup }}
+</div>

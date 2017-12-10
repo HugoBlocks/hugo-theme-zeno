@@ -1,0 +1,19 @@
+{
+  "name": "hugo-theme-zeno",
+  "version": "0.0.1",
+  "private": true,
+  "description": "compile sass for bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass-chokidar --source-map true ./src -o ./static/css/",
+    "watch": "chokidar 'src/**/*.scss' -c 'npm run build'"
+  },
+  "author": "lsenta",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "chokidar": "^1.7.0",
+    "chokidar-cli": "^1.2.0",
+    "node-sass-chokidar": "0.0.3"
+  }
+}

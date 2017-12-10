@@ -1,0 +1,56 @@
+<div class="row links text-center">
+    {{ with .Site.Author.twitter }}
+    <div class="col">
+        <a href="https://twitter.com/{{ . }}"
+           class="btn-circle"
+           target="_blank"
+           title="twitter">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+    </div>
+    {{ end }}
+
+    {{ with .Site.Author.github }}
+    <div class="col">
+        <a href="https://github.com/{{ . }}"
+           class="btn-circle"
+           target="_blank"
+           title="github">
+            <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+    </div>
+    {{ end }}
+
+    {{ with .Site.Author.blog }}
+    <div class="col">
+        <a href="{{ . }}"
+           class="btn-circle"
+           target="_blank"
+           title="blog">
+            <i class="fa fa-rss" aria-hidden="true"></i>
+        </a>
+    </div>
+    {{ end }}
+
+    {{ with .Site.Author.linkedin }}
+    <div class="col">
+        <a href="https://linkedin.com/{{ . }}"
+           class="btn-circle"
+           target="_blank"
+           title="linkedin">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+    </div>
+    {{ end }}
+
+    {{ with .Site.Author.angellist }}
+    <div class="col">
+        <a href="https://angel.co/{{ . }}"
+           class="btn-circle"
+           target="_blank"
+           title="angel">
+            <i class="fa fa-angellist" aria-hidden="true"></i>
+        </a>
+    </div>
+    {{ end }}
+</div>

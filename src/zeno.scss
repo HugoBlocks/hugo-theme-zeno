@@ -1,0 +1,202 @@
+// TODO: Header
+
+// Custom Colors
+// =============
+
+$balanced-white: #FBFCFD;
+$corporate-dark: #1E1E24;
+$corporate-grey: #E0E0E0;
+
+$heavy-green: #38620F;
+$vibrant-green: #6CAF2C;
+
+$heavy-blue: #031842;
+
+$heavy-red: #7C2A11;
+$vibrant-red: #FB6233;
+
+//$discrete-green: #211734;
+//$vibrant-green: #8B5AE3;
+
+//$heavy-yellow: #F1B61A;
+//$warm-yellow: #F1B61A;
+
+$body-bg: $balanced-white;
+$body-color: $corporate-dark;
+
+$primary: $vibrant-green;
+
+$font-family-base: 'PT Serif', serif;
+$headings-font-family: 'PT Serif', serif;
+//$headings-font-family: 'Roboto Condensed', sans-serif;
+$headings-small-font-family: 'Roboto', sans-serif;
+
+// Required
+// ========
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// Optional
+// ========
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/jumbotron";
+@import "node_modules/bootstrap/scss/card";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/badge";
+@import "node_modules/bootstrap/scss/alert";
+@import "node_modules/bootstrap/scss/utilities/flex";
+@import "node_modules/bootstrap/scss/utilities/text";
+@import "node_modules/bootstrap/scss/utilities/spacing";
+@import "node_modules/bootstrap/scss/utilities/display";
+@import "node_modules/bootstrap/scss/list-group";
+
+// Custom Design
+// =============
+
+body {
+  scroll-behavior: smooth;
+}
+
+body::before {
+  opacity: 0.5;
+  background: url("/topography.png") repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: "";
+  z-index: -1;
+}
+
+.push-down-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.btn-circle {
+  border: 2px solid $heavy-green;
+  color: $heavy-green;
+  display: inline-block;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  line-height: 5.7rem;
+
+  &:hover {
+    border-color: $link-hover-color;
+  }
+}
+
+.invert {
+  background-color: $heavy-blue;
+  color: $balanced-white;
+
+  h2 {
+    color: $corporate-grey;
+  }
+}
+
+.highlight {
+  color: $vibrant-green;
+}
+
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+
+h3 {
+  width: 100%;
+}
+
+.jumbotron {
+  padding: 0.9rem 0 4rem 0;
+  margin-bottom: 1rem;
+}
+
+// Sections Specifics
+// ==================
+
+#hero {
+  margin-top: 3vh;
+  min-height: 73vh;
+  position: relative;
+  padding-bottom: 5rem;
+
+  .pic {
+    margin-bottom: 3vh;
+  }
+
+  .tagline {
+  }
+
+  #cta {
+    text-align: center;
+    font-family: $headings-small-font-family;
+
+    .btn {
+      margin: 1rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      font-weight: 200;
+    }
+  }
+}
+
+#benefits {
+  .tagline {
+    color: $corporate-grey;
+  }
+}
+
+#features {
+  padding: 0.9rem 0 4rem 0;
+
+  a {
+    color: $vibrant-green;
+
+    &:hover {
+      text-decoration: none;
+      color: darken($vibrant-green, 15%)
+    }
+
+    .tagline {
+      color: $heavy-blue;
+    }
+  }
+}
+
+#contact {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+
+#footer {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+
+  .links {
+    a {
+      font-size: 3em;
+
+      transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+      &:hover {
+        background-color: $heavy-green;
+        color: $balanced-white;
+      }
+    }
+  }
+}

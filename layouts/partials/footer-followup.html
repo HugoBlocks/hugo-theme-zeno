@@ -1,0 +1,9 @@
+<div class="row" id="followup">
+    <div class="col">
+        <h3>{{ .title }}</h3>
+
+        {{ range .items }}
+        <h4><a href="{{ .url }}">{{ .heading }}</a></h4>
+        {{ end }}
+    </div>
+</div>

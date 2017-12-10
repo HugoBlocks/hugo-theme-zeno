@@ -1,10 +1,9 @@
 {{ define "main" }}
-{{ partial "cover" . }}
 
-<div class="container">
-    <section class="main">
-        {{ partial "list-posts" . }}
-    </section>
-</div>
+{{ partial "hero.html" . }}
+{{ partial "benefit-list.html" . }}
+{{ partial "feature-list.html" . }}
+{{ partial "reference-list.html" . }}
+{{ partial "contact.html" . }}
+
 {{ end }}
-

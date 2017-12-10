@@ -1,16 +1,4 @@
 {{ define "main" }}
-{{ partial "cover-not-found" . }}
-
-
-<div class="container">
-    <section class="main">
-        <h2>Last Articles:</h2>
-        <div class="row post-list">
-            {{ range first 4 (where .Site.Pages "Section" "posts") }}
-            {{ partial "page-summary.html" . }}
-            {{ end }}
-        </div>
-    </section>
-</div>
+<h2>404</h2>
 {{ end }}
 
