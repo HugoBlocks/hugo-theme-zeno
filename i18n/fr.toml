@@ -1,0 +1,32 @@
+[en]
+other = "🇺🇸 English"
+
+[fr]
+other = "🇫🇷 Francais"
+
+[readmore]
+other = "Lire la suite"
+
+[subscribe_header]
+other = "Abonnez-vous à notre Newsletter"
+
+[field_firstname]
+other = "Prénom"
+
+[field_email]
+other = "Adresse Email"
+
+[ml_description]
+other = "Abonnez-vous pour recevoir nos prochaines publications, des exemples et des guides."
+
+[ml_subscribe]
+other = "S'inscrire"
+
+[with_the_tags]
+other = "Avec les tags"
+
+[published_on]
+other = "Publié le"
+
+[written_by]
+other = "Écris par"
