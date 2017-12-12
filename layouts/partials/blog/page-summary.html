@@ -1,0 +1,18 @@
+<div itemscope itemtype="http://schema.org/CreativeWork" class="{{ .Section }} col-md-10">
+    <div class="post-content">
+        <div class="post-body">
+            <h2 itemprop="headline" class="post-title">
+                <a class="post-link" href="{{ .Permalink }}">
+                    {{ .Title }}
+                </a>
+            </h2>
+            <p itemprop="description" class="post-text">
+                {{ .Description }}
+            </p>
+            <a class="post-link post-read-more btn button-block btn-outline-primary"
+               href="{{ .Permalink }}">
+                {{ i18n "readmore" }}
+            </a>
+        </div>
+    </div>
+</div>

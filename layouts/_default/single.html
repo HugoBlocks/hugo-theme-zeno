@@ -1,52 +1,40 @@
 {{ define "main" }}
+<div class="single ">
+    <div class="white-bg content-wrapper">
+        {{ partial "blog/header" . }}
 
-{{ partial "cover-post" . }}
+        {{ with .Params.cover }}
+        <div class="cover"
+             style="background-image: url('{{ . | absURL }}');"
+        ></div>
+        {{ end }}
 
-<div class="container single">
-    <div class="row post-title">
-        <h1>{{ .Title }}</h1>
-    </div>
+        <div class="content-padder">
+            <div class="container single">
+                <div class="row post-title">
+                    <h1>{{ .Title }}</h1>
+                </div>
 
-    <div class="row post-content">
-        {{ .Content }}
-    </div>
-</div>
+                <div class="row post-content">
+                    {{ .Content }}
+                </div>
+            </div>
 
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        {{ partial "subscribe.html" . }}
-    </div>
-</div>
+            {{ partial "subscribe.html" . }}
+        </div>
+        <div class="container-fluid container-author">
+            {{ partial "components/author-card" . }}
+        </div>
 
-<div class="container-fluid container-author">
-    {{ partial "author-card" . }}
-</div>
-
-<div class="container-fluid">
-    <div class="row post-share">
-        <div class="col-md-12">
-            <h5>Share this post</h5>
-            <a class="fa fa-twitter" style="font-size: 1.4em"
-               href="https://twitter.com/share?text={{ .Title | safeHTML}}&nbsp;-&nbsp;{{ .Site.Title }}&amp;url={{ .Permalink }}"
-               onclick="window.open(this.href, 'twitter-share', 'width=550,height=235')return false">
-            </a>
-            <a class="fa fa-facebook" style="font-size: 1.4em"
-               href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"
-               onclick="window.open(this.href, 'facebook-share','width=580,height=296')return false">
-            </a>
-            <a class="fa fa-google-plus" style="font-size: 1.4em"
-               href="https://plus.google.com/share?url={{ .Permalink }}"
-               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530')return false">
-            </a>
+        <div class="container-fluid">
+            {{ if .Site.DisqusShortname }}
+            <div class="row comments">
+                <div class="col-md-12">
+                    {{ template "_internal/disqus.html" . }}
+                </div>
+            </div>
+            {{ end }}
         </div>
     </div>
-
-    {{ if .Site.DisqusShortname }}
-    <div class="row comments">
-        <div class="col-md-12">
-            {{ template "_internal/disqus.html" . }}
-        </div>
-    </div>
-    {{ end }}
 </div>
 {{ end }}

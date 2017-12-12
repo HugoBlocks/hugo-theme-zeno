@@ -1,0 +1,10 @@
+<div class="container" id="hero">
+    {{ partial "components/brand-header" . }}
+
+    <h4 class="text-muted text-center mt-4">{{ i18n "connect_with_us" }}</h4>
+    {{ partial "author-links" .Site.Author }}
+
+    <div class="push-down-wrapper">
+        {{ partial "blog/header-cta" . }}
+    </div>
+</div>

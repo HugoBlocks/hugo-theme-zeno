@@ -1,56 +1,67 @@
-<div class="row links text-center">
-    {{ with .Site.Author.twitter }}
-    <div class="col">
+<ul class="nav justify-content-center links">
+    {{ with .twitter }}
+    <li class="nav-item">
         <a href="https://twitter.com/{{ . }}"
-           class="btn-circle"
+           class="nav-link"
            target="_blank"
            title="twitter">
             <i class="fa fa-twitter" aria-hidden="true"></i>
         </a>
-    </div>
+    </li>
     {{ end }}
 
-    {{ with .Site.Author.github }}
-    <div class="col">
+    {{ with .github }}
+    <li class="nav-item">
         <a href="https://github.com/{{ . }}"
-           class="btn-circle"
+           class="nav-link"
            target="_blank"
            title="github">
             <i class="fa fa-github" aria-hidden="true"></i>
         </a>
-    </div>
+    </li>
     {{ end }}
 
-    {{ with .Site.Author.blog }}
-    <div class="col">
+    {{ with .facebook }}
+    <li class="nav-item">
+        <a href="https://facebook.com/{{ . }}"
+           class="nav-link"
+           target="_blank"
+           title="github">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+    </li>
+    {{ end }}
+
+    {{ with .blog }}
+    <li class="nav-item">
         <a href="{{ . }}"
-           class="btn-circle"
+           class="nav-link"
            target="_blank"
            title="blog">
             <i class="fa fa-rss" aria-hidden="true"></i>
         </a>
-    </div>
+    </li>
     {{ end }}
 
-    {{ with .Site.Author.linkedin }}
-    <div class="col">
+    {{ with .linkedin }}
+    <li class="nav-item">
         <a href="https://linkedin.com/{{ . }}"
-           class="btn-circle"
+           class="nav-link"
            target="_blank"
            title="linkedin">
             <i class="fa fa-linkedin" aria-hidden="true"></i>
         </a>
-    </div>
+    </li>
     {{ end }}
 
-    {{ with .Site.Author.angellist }}
-    <div class="col">
+    {{ with .angellist }}
+    <li class="nav-item">
         <a href="https://angel.co/{{ . }}"
-           class="btn-circle"
+           class="nav-link"
            target="_blank"
            title="angel">
             <i class="fa fa-angellist" aria-hidden="true"></i>
         </a>
-    </div>
+    </li>
     {{ end }}
-</div>
+</ul>

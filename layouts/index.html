@@ -1,9 +1,17 @@
 {{ define "main" }}
+<div class="blog">
+    {{ partial "blog/hero" . }}
 
-{{ partial "hero.html" . }}
-{{ partial "benefit-list.html" . }}
-{{ partial "feature-list.html" . }}
-{{ partial "reference-list.html" . }}
-{{ partial "contact.html" . }}
+    <div class="content-wrapper">
+        <div class="marged">
+            <div class="container-fluid">
+                <section class="main">
+                    {{ partial "blog/list-posts" . }}
+                </section>
+            </div>
+        </div>
 
+        {{ partial "subscribe.html" . }}
+    </div>
+</div>
 {{ end }}

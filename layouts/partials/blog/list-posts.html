@@ -1,0 +1,22 @@
+{{ range $i, $e := .Paginator.Pages.ByDate.Reverse }}
+{{ if eq .Section "posts" }}
+<div class="post-item row justify-content-center {{ if modBool $i 2 }}even{{ else }}odd{{ end }}">
+    {{ partial "blog/page-summary.html" . }}
+</div>
+{{ end }}
+{{ end }}
+
+{{/*
+<nav class="my-pagination">
+    {{ if .Paginator.HasPrev }}
+    <a class="pill outline pagination-previous" href="{{ .Paginator.Prev.URL }}">← Previous</a>
+    {{ end }}
+
+    <a href="" class="pill outline">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</a>
+
+    {{ if .Paginator.HasNext }}
+    <a class="pill outline pagination-next" href="{{ .Paginator.Next.URL }}">Next →</a>
+    {{ end }}
+</nav>
+*/}}
+

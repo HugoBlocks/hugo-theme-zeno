@@ -3,8 +3,11 @@
 // Custom Colors
 // =============
 
+$WHITE: #FFF;
 $balanced-white: #FBFCFD;
 $corporate-dark: #1E1E24;
+$light-grey: #F9F9F9;
+$light-grey-border: #f3f3f3;
 $corporate-grey: #E0E0E0;
 
 $heavy-green: #38620F;
@@ -28,7 +31,7 @@ $primary: $vibrant-green;
 
 $font-family-base: 'PT Serif', serif;
 $headings-font-family: 'PT Serif', serif;
-//$headings-font-family: 'Roboto Condensed', sans-serif;
+$headings-font-family-sans: 'Roboto Condensed', sans-serif;
 $headings-small-font-family: 'Roboto', sans-serif;
 
 // Required
@@ -49,29 +52,24 @@ $headings-small-font-family: 'Roboto', sans-serif;
 @import "node_modules/bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/badge";
 @import "node_modules/bootstrap/scss/alert";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/navbar";
 @import "node_modules/bootstrap/scss/utilities/flex";
 @import "node_modules/bootstrap/scss/utilities/text";
 @import "node_modules/bootstrap/scss/utilities/spacing";
 @import "node_modules/bootstrap/scss/utilities/display";
 @import "node_modules/bootstrap/scss/list-group";
 
+// Are you missing a component import? uncomment:
+// TODO: broken navbar, miss an import
+@import "node_modules/bootstrap/scss/bootstrap";
+
 // Custom Design
 // =============
 
 body {
   scroll-behavior: smooth;
-}
-
-body::before {
-  opacity: 0.5;
-  background: url("/topography.png") repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  content: "";
-  z-index: -1;
+  background: url("/topography_a05.png") repeat;
 }
 
 .push-down-wrapper {
@@ -80,18 +78,123 @@ body::before {
   width: 100%;
 }
 
-.btn-circle {
-  border: 2px solid $heavy-green;
-  color: $heavy-green;
-  display: inline-block;
-  border-radius: 50%;
-  width: 6rem;
-  height: 6rem;
-  line-height: 5.7rem;
+.text-dark {
+  color: $heavy-blue;
+}
 
-  &:hover {
-    border-color: $link-hover-color;
+.post-author {
+  font-size: 1rem;
+  margin-bottom: 3em;
+  margin-top: 3em;
+
+  h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: $headings-font-family-sans;
+
+    &.header-info {
+      text-transform: uppercase;
+      color: lighten($corporate-dark, 30%);
+      margin: 0;
+    }
   }
+
+  .author-pic {
+    text-align: center;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .author-name {
+    font-size: 1.3rem;
+    color: $corporate-dark;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: $headings-font-family-sans;
+  }
+
+  .author-bio {
+    color: #a9a9a9;
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+
+  .author-website a {
+    font-style: italic;
+    font-weight: 400;
+    color: #a9a9a9;
+  }
+}
+
+h4.header-info-value {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+h4.info-tags {
+  line-height: 1.5em;
+}
+
+.blog-header {
+
+  .navbar-toggler {
+    border: 1px solid #eee;
+    margin-top: 0.5rem;
+  }
+
+  .navbar-brand {
+    margin-right: 50px;
+  }
+
+  /* Nav links */
+  a.nav-link,
+  a.nav-link:visited {
+    font-family: $headings-small-font-family;
+    margin-right: 50px;
+    padding: 1rem;
+    color: $corporate-dark;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all linear 0.1s;
+  }
+
+  a.nav-link:hover,
+  a.nav-link:focus,
+  a.nav-link:active {
+    font-weight: 400;
+    color: $vibrant-green;
+    text-decoration: none;
+    transition: all linear 0.1s;
+  }
+}
+
+.links {
+  a.nav-link {
+    display: inline-block;
+    width: 5rem;
+    text-align: center;
+
+    font-size: 3em;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      border-color: $link-hover-color;
+      background-color: $heavy-green;
+      color: $balanced-white;
+    }
+
+  }
+}
+
+.container-author {
+  border-top: 1px solid $light-grey-border;
+  background-color: $light-grey;
+  padding: 0.2em 0 0.2em 0;
+  margin: 1em 0 1em 0;
+  border-bottom: 1px solid #eee;
 }
 
 .invert {
@@ -103,8 +206,25 @@ body::before {
   }
 }
 
+.marged {
+  //margin: 1rem 3rem 1rem 2rem;
+}
+
+.content-wrapper {
+  width: 95%;
+  margin: auto;
+}
+
+.content-padder {
+  padding: 2rem;
+}
+
 .highlight {
   color: $vibrant-green;
+}
+
+.white-bg {
+  background-color: #FFF;
 }
 
 h1 {
@@ -131,7 +251,6 @@ h3 {
 
 #hero {
   margin-top: 3vh;
-  min-height: 73vh;
   position: relative;
   padding-bottom: 5rem;
 
@@ -153,11 +272,123 @@ h3 {
       font-weight: 200;
     }
   }
+
+  .links {
+    font-size: 1rem;
+  }
+}
+
+.landing #hero {
+  min-height: 73vh;
+}
+
+.blog #hero {
+  min-height: 55vh;
 }
 
 #benefits {
   .tagline {
     color: $corporate-grey;
+  }
+}
+
+.post-item {
+  text-align: center;
+  padding: 2em 0 2em 0;
+
+  &.even {
+    background-color: $WHITE;
+  }
+
+  &.odd {
+    background-color: $light-grey;
+  }
+}
+
+.cover {
+  height: 70vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.post-title {
+  font-family: $headings-font-family-sans;
+  font-weight: 400;
+  font-size: 1.8rem;
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.single {
+
+  .post-title h1 {
+    font-weight: 600;
+  }
+}
+
+.post-content {
+  font-size: 1.2rem;
+  line-height: 1.58;
+  font-weight: 200;
+
+  h2 {
+    margin-top: 0.78em;
+    margin-bottom: 0.3em;
+    font-size: 1.7rem;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    font-family: $headings-font-family-sans;
+  }
+
+  ol {
+    display: block;
+    width: 100%;
+  }
+
+  p {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  pre {
+    width: 100%;
+    background-color: #1b1e21;
+    color: #2daf10;
+    border: 1px solid #222;
+    border-radius: 0.9em;
+    padding: 1em;
+  }
+
+  blockquote {
+    width: 80%;
+    margin: auto;
+    display: inline-block;
+    color: #5d5d5d;
+  }
+
+}
+
+.post-text {
+
+}
+
+#connect {
+  text-align: center;
+
+  h4 {
+    width: 100%;
   }
 }
 
@@ -178,25 +409,22 @@ h3 {
   }
 }
 
-#contact {
+#subscribe {
   padding-top: 1.4rem;
   padding-bottom: 1.4rem;
+
+  .card {
+    background-color: $light-grey;
+    border: 1px solid $light-grey-border;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
 }
 
 #footer {
   margin-top: 4rem;
   margin-bottom: 2rem;
-
-  .links {
-    a {
-      font-size: 3em;
-
-      transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
-      &:hover {
-        background-color: $heavy-green;
-        color: $balanced-white;
-      }
-    }
-  }
 }
+
