@@ -10047,6 +10047,9 @@ h4.header-info-value {
 h4.info-tags {
   line-height: 1.5em; }
 
+.pagination {
+  margin: 2rem; }
+
 .blog-header {
   /* Nav links */ }
   .blog-header .navbar-toggler {
@@ -10146,8 +10149,10 @@ h3 {
 .blog #hero {
   min-height: 55vh; }
 
-#benefits .tagline {
-  color: #E0E0E0; }
+#benefits {
+  margin-bottom: 0; }
+  #benefits .tagline {
+    color: #E0E0E0; }
 
 .post-item {
   text-align: center;

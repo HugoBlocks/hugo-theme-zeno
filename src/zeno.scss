@@ -138,6 +138,10 @@ h4.info-tags {
   line-height: 1.5em;
 }
 
+.pagination {
+  margin: 2rem;
+}
+
 .blog-header {
 
   .navbar-toggler {
@@ -287,6 +291,8 @@ h3 {
 }
 
 #benefits {
+  margin-bottom: 0;
+
   .tagline {
     color: $corporate-grey;
   }
@@ -326,7 +332,6 @@ h3 {
 }
 
 .single {
-
   .post-title h1 {
     font-weight: 600;
   }

@@ -3,9 +3,12 @@
 <div class="landing">
     {{ partial "landing/hero.html" . }}
     {{ partial "landing/benefit-list.html" . }}
-    {{ partial "landing/feature-list.html" . }}
-    {{ partial "landing/reference-list.html" . }}
-    {{ partial "subscribe.html" . }}
+
+    <div class="white-bg">
+        {{ partial "landing/reference-list.html" . }}
+        {{ partial "landing/feature-list.html" . }}
+        {{ partial "subscribe.html" . }}
+    </div>
 </div>
 
 {{ end }}
