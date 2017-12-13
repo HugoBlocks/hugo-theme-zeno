@@ -67,9 +67,12 @@ $headings-small-font-family: 'Roboto', sans-serif;
 // Custom Design
 // =============
 
+html {
+}
+
 body {
   scroll-behavior: smooth;
-  background: url("/topography_a05.png") repeat;
+  background: url("/a.gif") repeat;
 }
 
 .push-down-wrapper {
@@ -257,6 +260,7 @@ h3 {
   margin-top: 3vh;
   position: relative;
   padding-bottom: 5rem;
+  color: $balanced-white;
 
   .pic {
     margin-bottom: 3vh;

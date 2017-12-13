@@ -9998,7 +9998,7 @@ a.text-dark:focus, a.text-dark:hover {
 
 body {
   scroll-behavior: smooth;
-  background: url("/topography_a05.png") repeat; }
+  background: url("/a.gif") repeat; }
 
 .push-down-wrapper {
   position: absolute;
@@ -10129,7 +10129,8 @@ h3 {
 #hero {
   margin-top: 3vh;
   position: relative;
-  padding-bottom: 5rem; }
+  padding-bottom: 5rem;
+  color: #FBFCFD; }
   #hero .pic {
     margin-bottom: 3vh; }
   #hero #cta {
