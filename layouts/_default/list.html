@@ -1,13 +1,17 @@
 {{ define "main" }}
+<div class="blog">
+    {{ partial "blog/hero" . }}
 
-{{/*
+    <div class="content-wrapper white-bg">
+        <div class="marged">
+            <div class="container-fluid">
+                <section class="main">
+                    {{ partial "blog/list-posts" . }}
+                </section>
+            </div>
+        </div>
 
-<div class="container-fluid">
-    <section class="main">
-        {{ partial "list-posts" . }}
-    </section>
+        {{ partial "subscribe.html" . }}
+    </div>
 </div>
-
-*/}}
-
 {{ end }}
