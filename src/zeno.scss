@@ -1,0 +1,480 @@
+/**
+ * ZENO Theme,
+ * by Laurent Senta (github.com/lsenta).
+ *
+ * Blue and green theme,
+ * used for www.singulargarden.com and blog.singulargarden.com
+ *
+ * Includes Bootstrap 4
+ */
+
+// Custom Colors & Fonts
+// =====================
+
+$white: #FFF;
+
+$balanced-white: #FBFCFD;
+$corporate-dark: #1E1E24;
+$corporate-grey: #E0E0E0;
+
+$light-grey: #F9F9F9;
+$light-grey-border: #f3f3f3;
+
+$heavy-green: #38620F;
+$vibrant-green: #6CAF2C;
+
+$heavy-blue: #031842;
+
+$heavy-red: #7C2A11;
+$vibrant-red: #FB6233;
+
+// ## Override Bootstrap Defaults
+$primary: $vibrant-green;
+$body-bg: $balanced-white;
+$body-color: $corporate-dark;
+
+$font-family-base: 'PT Serif', serif;
+$headings-font-family: 'PT Serif', serif;
+$headings-font-family-sans: 'Roboto Condensed', sans-serif;
+$headings-small-font-family: 'Roboto', sans-serif;
+
+// Bootstrap
+// =========
+
+// ## Required
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// ## Optional
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/jumbotron";
+@import "node_modules/bootstrap/scss/card";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/badge";
+@import "node_modules/bootstrap/scss/alert";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/navbar";
+@import "node_modules/bootstrap/scss/utilities/flex";
+@import "node_modules/bootstrap/scss/utilities/text";
+@import "node_modules/bootstrap/scss/utilities/spacing";
+@import "node_modules/bootstrap/scss/utilities/display";
+@import "node_modules/bootstrap/scss/list-group";
+
+// Are you missing a component import? uncomment:
+// TODO: broken navbar, miss an import
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Design
+// ======
+
+html {
+}
+
+body {
+  scroll-behavior: smooth;
+  background: url("/pattern.gif") repeat;
+}
+
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+
+h3 {
+  width: 100%;
+}
+
+.jumbotron {
+  padding: 0.9rem 0 4rem 0;
+  margin-bottom: 1rem;
+}
+
+// Tools
+// =====
+
+.content-wrapper {
+  width: 95%;
+  max-width: 900px;
+  margin: auto;
+}
+
+.push-down-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.content-padder {
+  padding: 2rem;
+}
+
+.marged {
+  //margin: 1rem 3rem 1rem 2rem;
+}
+
+.marged-top {
+  margin-top: 1rem;
+}
+
+.invert {
+  background-color: $heavy-blue;
+  color: $balanced-white;
+
+  h2 {
+    color: $corporate-grey;
+  }
+}
+
+.text-dark {
+  color: $heavy-blue;
+}
+
+.highlight {
+  color: $vibrant-green;
+}
+
+.white-bg {
+  background-color: #FFF;
+}
+
+// Components
+// ==========
+
+.post-author {
+  font-size: 1rem;
+  margin-bottom: 3em;
+  margin-top: 3em;
+
+  h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-family: $headings-font-family-sans;
+
+    &.header-info {
+      text-transform: uppercase;
+      color: lighten($corporate-dark, 30%);
+      margin: 0;
+    }
+  }
+
+  .author-pic {
+    text-align: center;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .author-name {
+    font-size: 1.3rem;
+    color: $corporate-dark;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: $headings-font-family-sans;
+  }
+
+  .author-bio {
+    color: #a9a9a9;
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+  }
+
+  .author-website a {
+    font-style: italic;
+    font-weight: 400;
+    color: #a9a9a9;
+  }
+}
+
+h4.header-info-value {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+h4.info-tags {
+  line-height: 1.5em;
+}
+
+.pagination {
+  margin: 2rem;
+  text-align: center;
+}
+
+.blog-header {
+  .navbar-toggler {
+    border: 1px solid #eee;
+    margin-top: 0.5rem;
+  }
+
+  .navbar-brand {
+    margin-right: 50px;
+  }
+
+  /* Nav links */
+  a.nav-link,
+  a.nav-link:visited {
+    font-family: $headings-small-font-family;
+    margin-right: 50px;
+    padding: 1rem;
+    color: $corporate-dark;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all linear 0.1s;
+  }
+
+  a.nav-link:hover,
+  a.nav-link:focus,
+  a.nav-link:active {
+    font-weight: 400;
+    color: $vibrant-green;
+    text-decoration: none;
+    transition: all linear 0.1s;
+  }
+}
+
+.links {
+  a.nav-link {
+    display: inline-block;
+    width: 5rem;
+    text-align: center;
+
+    font-size: 3em;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      border-color: $link-hover-color;
+      background-color: $heavy-green;
+      color: $balanced-white;
+    }
+
+  }
+}
+
+.container-author {
+  border-top: 1px solid $light-grey-border;
+  background-color: $light-grey;
+  padding: 0.2em 0 0.2em 0;
+  margin: 1em 0 1em 0;
+  border-bottom: 1px solid #eee;
+}
+
+// Sections Specifics
+// ==================
+
+#hero {
+  margin-top: 5vh;
+  position: relative;
+  color: $balanced-white;
+
+  .blog & {
+
+  }
+
+  .landing & {
+    min-height: 63vh;
+    padding-bottom: 5rem;
+  }
+
+  .pic {
+    margin-bottom: 3vh;
+  }
+
+  .tagline {
+  }
+
+  #cta {
+    text-align: center;
+    font-family: $headings-small-font-family;
+
+    .btn {
+      margin: 1rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      font-weight: 200;
+    }
+  }
+
+  .links {
+    font-size: 1rem;
+  }
+}
+
+#benefits {
+  margin-bottom: 0;
+
+  .tagline {
+    color: $corporate-grey;
+  }
+}
+
+.post-item {
+  text-align: center;
+  padding: 2em 0 2em 0;
+
+  .categories {
+  }
+
+  &.even {
+    background-color: $white;
+
+    .badge-light {
+      color: #b6b6b6;
+      background-color: transparent; // #f8f8f8;
+
+      &:hover {
+        color: #6d8458;
+      }
+    }
+  }
+
+  &.odd {
+    background-color: $light-grey;
+
+    .badge-light {
+      color: #c1c1c1;
+      background-color: transparent; // #e6e6e6;
+
+      &:hover {
+        color: #6d8458;
+      }
+    }
+  }
+}
+
+.cover {
+  height: 70vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.post-title {
+  font-family: $headings-font-family-sans;
+  font-weight: 400;
+  font-size: 1.8rem;
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.single {
+  .post-title h1 {
+    font-weight: 600;
+  }
+}
+
+.post-content {
+  font-size: 1.2rem;
+  line-height: 1.58;
+  font-weight: 200;
+
+  h2 {
+    margin-top: 0.78em;
+    margin-bottom: 0.3em;
+    font-size: 1.7rem;
+  }
+
+  h1, h2, h3, h4, h5 {
+    width: 100%;
+    font-weight: 700;
+    font-family: $headings-font-family-sans;
+  }
+
+  ol {
+    display: block;
+    width: 100%;
+  }
+
+  p {
+    width: 100%;
+  }
+
+  img {
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  pre {
+    width: 100%;
+    background-color: #1b1e21;
+    color: #2daf10;
+    border: 1px solid #222;
+    border-radius: 0.9em;
+    padding: 1em;
+  }
+
+  blockquote {
+    width: 80%;
+    margin: auto;
+    display: inline-block;
+    color: #5d5d5d;
+  }
+
+  b, strong {
+    font-weight: 800;
+  }
+
+}
+
+.post-text {
+
+}
+
+#connect {
+  text-align: center;
+
+  h4 {
+    width: 100%;
+  }
+}
+
+#features {
+  padding: 0.9rem 0 4rem 0;
+
+  a {
+    color: $vibrant-green;
+
+    &:hover {
+      text-decoration: none;
+      color: darken($vibrant-green, 15%)
+    }
+
+    .tagline {
+      color: $heavy-blue;
+    }
+  }
+}
+
+#subscribe {
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+
+  .card {
+    background-color: $light-grey;
+    border: 1px solid $light-grey-border;
+    color: #222;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+#footer {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}

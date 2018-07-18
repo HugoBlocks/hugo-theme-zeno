@@ -1,0 +1,88 @@
+{{/* TODO: the ugly `if elif $.Site` could be replaced by vars and default */}}
+<div class="container" id="subscribe">
+    <div class="card">
+        <div class="card-body">
+
+        {{ with $.Site.Params.Subscribe.Title }}
+            <h2 class="text-center">{{ . }}</h2>
+        {{ end }}
+
+
+
+            <div class="row">
+                <!-- Begin MailChimp Signup Form -->
+                <div class="col" id="mc_embed_signup">
+                    <form action="{{ $.Site.Params.Subscribe.mailchimpAction }}" method="post"
+                          id="mc-embedded-subscribe-form"
+                          name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+
+                            <div class="row">
+                                <div class="mc-field-group col-12 col-md-6 form-group">
+                                    <label for="mce-FIRST_NAME" class="sr-only">{{ i18n "field_firstname" }}</label>
+                                    <input type="text" value="" name="FIRST_NAME" class="form-control"
+                                           autocomplete="name"
+                                           placeholder="{{ i18n "field_firstname" }}"
+                                           id="mce-FIRST_NAME"/>
+                                </div>
+
+                                <div class="mc-field-group col-12 col-md-6 form-group">
+                                    <label for="mce-EMAIL" class="sr-only">{{ i18n "field_email" }}</label>
+                                    <input type="email" value="" name="EMAIL" class="required email form-control"
+                                           placeholder="{{ i18n "field_email" }}"
+                                           autocomplete="email"
+                                           id="mce-EMAIL"/>
+                                </div>
+                            </div>
+
+                            <!-- Language Selection -->
+                            <input type="hidden" readonly name="group[2371]"
+                                   class="REQ_CSS" id="mce-group[2371]"
+                                   value="{{  $.Site.Params.MailchimpLanguageGroup }}">
+
+                            <div id="mce-responses" class="clear">
+                                <div class="response alert alert-danger" id="mce-error-response" style="display:none"
+                                     role="alert">
+                                </div>
+                                <div class="response alert alert-success" id="mce-success-response"
+                                     style="display:none">
+                                </div>
+                            </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                                                                                      name="b_ad396483aa8c2ee83fe1d7758_81f907caab"
+                                                                                                      tabindex="-1"
+                                                                                                      value="">
+                            </div>
+                            <div class="clear text-center">
+                                <input type="submit" value="{{ i18n "subscribe" }}"
+                                       name="subscribe"
+                                       id="mc-embedded-subscribe" class="button btn btn-primary"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <script type='text/javascript'
+                        src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                <script type='text/javascript'>(function ($) {
+                    window.fnames = new Array();
+                    window.ftypes = new Array();
+                    fnames[0] = 'EMAIL';
+                    ftypes[0] = 'email';
+                    fnames[1] = 'NAME';
+                    ftypes[1] = 'text';
+                    fnames[3] = 'MESSAGE';
+                    ftypes[3] = 'text';
+                }(jQuery));
+                var $mcj = jQuery.noConflict(true);</script>
+                <!--End mc_embed_signup-->
+
+            </div>
+
+        {{ with $.Site.Params.Subscribe.Tagline }}
+            <h3 class="text-center mt-4">{{ . }}</h3>
+        {{ end }}
+
+        </div>
+    </div>
+</div>

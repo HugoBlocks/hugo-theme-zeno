@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="landing">
+    <div class="content-wrapper white-bg">
+        <div class="marged marged-top">
+        {{ partialCached "navbar" . }}
+        </div>
+    </div>
+
+{{ partial "landing/hero.html" . }}
+{{ partial "landing/benefits.html" . }}
+
+    <div class="white-bg">
+    {{ partial "landing/references.html" . }}
+        {{ partial "landing/features.html" . }}
+        {{ partial "subscribe.html" . }}
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,58 @@
+{{ if .Params.author }}
+{{ $.Scratch.Set "currentAuthor" ( index .Site.Params.Authors .Params.author ) }}
+{{ else }}
+{{ $.Scratch.Set "currentAuthor" .Site.Author }}
+{{ end }}
+
+{{ $author := $.Scratch.Get "currentAuthor" }}
+
+<div itemprop="author" itemscope="" itemtype="http://schema.org/Person" class="row justify-content-center post-author">
+    <div class="col-md-2 author-pic">
+        <img itemprop="image" src="{{ $author.image }}"/>
+    </div>
+    <div class="col-md-8 author-info">
+        <h4 class="header-info">{{ i18n "written_by" }}</h4>
+
+        <a href="{{ $author.homepage }}" itemprop="url" class="author-name">
+            <span itemprop="name">{{ $author.name }}</span>
+        </a>
+        <p itemprop="description" class="author-bio">
+        {{ $author.bio }}
+        </p>
+        <p class="author-website">
+            <a href="{{ $author.homepage }}" rel="nofollow">{{ $author.homepage }}</a>
+        </p>
+
+        <h4 class="header-info text-dark">{{ i18n "published_on" }}</h4>
+        <h4 class="info-published header-info-value">
+            <time itemprop="datePublished" class="post-date">
+            {{ .Date.Format "2 Jan 2006" }}
+            </time>
+        </h4>
+    {{ with .Params.tags }}
+        <h4 class="header-info text-dark">{{ i18n "with_the_tags" }}</h4>
+        <h4 class="info-tags header-info-value">
+            <span itemprop="keywords" class="tags-list">
+            {{ range $i, $e := . }}
+            {{- if $i }},{{ end }}
+                <a class="" href="{{ $.Site.LanguagePrefix }}/tags/{{ . | urlize }}">{{- $e }}</a>
+            {{- end -}}
+            </span>
+        </h4>
+    {{ end }}
+
+    {{ with .Params.categories }}
+        <h4 class="header-info text-dark">{{ i18n "in_categories" }}:</h4>
+        <h4 class="info-categories header-info-value">
+        {{ range $i, $e := . }}
+        {{- if $i }},{{ end }}
+            <span itemprop="keywords" class="categories-list">
+              <a class="" href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">
+              {{ . }}
+              </a>
+            </span>
+        {{ end }}
+        </h4>
+    {{ end }}
+    </div>
+</div>

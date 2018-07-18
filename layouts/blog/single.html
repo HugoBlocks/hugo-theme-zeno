@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div class="single ">
+    <div class="content-wrapper white-bg">
+        <div class="marged marged-top">
+        {{ partial "navbar" . }}
+        </div>
+
+    {{ with .Params.cover }}
+        <div class="cover"
+             style="background-image: url('{{ . | absURL }}');"
+        ></div>
+    {{ end }}
+
+        <div class="content-padder">
+            <div class="container single">
+                <div class="row post-title">
+                    <h1>{{ .Title }}</h1>
+                </div>
+
+                <div class="row post-content">
+                {{ .Content }}
+                </div>
+            </div>
+
+        {{ partial "subscribe.html" . }}
+
+        {{ partial "blog/pagination-single" . }}
+        </div>
+
+        <div class="container-fluid container-author">
+        {{ partial "author/card" . }}
+        </div>
+
+        <div class="container-fluid">
+        {{ if .Site.DisqusShortname }}
+            <div class="row comments">
+                <div class="col-md-12">
+                {{ template "_internal/disqus.html" . }}
+                </div>
+            </div>
+        {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

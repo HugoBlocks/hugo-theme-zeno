@@ -1,0 +1,22 @@
+<div class="row justify-content-center">
+    <div class="col-8 col-sm-6 col-md-4 pic">
+        <a href="{{ .Site.Params.homeURL }}" title="singulargarden">
+            <img class="img-fluid" src="{{ .Params.intro.image | default .Site.Params.Intro.Image }}"/>
+        </a>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-12">
+        <h1 class="intro text-center">
+        {{ .Params.intro.headline | default .Site.Params.Intro.headline }}
+        </h1>
+
+    {{ with .Params.intro.tagline | default .Site.Params.Intro.Tagline }}
+        <h2 class="tagline mt-4 text-center">
+        {{ . }}
+        </h2>
+    {{ end }}
+    </div>
+</div>
+
