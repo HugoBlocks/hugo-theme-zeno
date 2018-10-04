@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ partial "components/header.html" . }}
+
+<div class="list">
+{{ partial "blocks" . }}
+
+    <section class="main items">
+    {{ partial "posts/posts" . }}
+    </section>
+
+{{ partial "subscribe.html" . }}
+</div>
+{{ end }}

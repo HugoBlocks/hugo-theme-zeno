@@ -1,23 +1,19 @@
+[contact]
+other = "Contact Us"
+
+# Old
+
 [en]
-other = "English&nbps;/&nbsp;Anglais"
+other = "In English / Anglais"
 
 [fr]
-other = "French&nbsp;/&nbsp;Français"
-
-[learnmore]
-other = "Learn More"
+other = "In French / Français"
 
 [readmore]
 other = "Read More"
 
-[connect_with_us]
-other = "Connect with us"
-
 [with_the_tags]
 other = "With the tags"
-
-[in_categories]
-other = "In Category"
 
 [published_on]
 other = "Published on"
@@ -29,7 +25,7 @@ other = "Written by"
 other = "Subscribe"
 
 [subscribe_header]
-other = "Subscribe to our mailing list"
+other = "Subscribe to get more articles"
 
 [subscribe_description]
 other = "Subscribe to receive our next articles, examples & guides."
@@ -37,5 +33,12 @@ other = "Subscribe to receive our next articles, examples & guides."
 [field_firstname]
 other = "First Name"
 
+[field_name]
+other = "Name"
+
 [field_email]
 other = "Email Address"
+
+[learnmore]
+other = "Learn More"
+

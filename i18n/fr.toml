@@ -1,23 +1,14 @@
 [en]
-other = "English&nbsp;/&nbsp;Anglais"
+other = "In English / Anglais"
 
 [fr]
-other = "French&nbsp;/&nbsp;Français"
-
-[learnmore]
-other = "Détails"
+other = "In French / Français"
 
 [readmore]
 other = "Lire la suite"
 
-[connect_with_us]
-other = "Connectez-vous"
-
 [with_the_tags]
 other = "Avec les tags"
-
-[in_categories]
-other = "Dans la catégorie"
 
 [published_on]
 other = "Publié le"
@@ -26,16 +17,25 @@ other = "Publié le"
 other = "Écris par"
 
 [subscribe]
-other = "S'abonner"
+other = "S'inscrire"
 
 [subscribe_header]
-other = "Abonnez-vous à notre Newsletter"
+other = "Recevez les prochains articles"
 
 [subscribe_description]
-other = "Abonnez-vous pour recevoir nos prochaines publications, des exemples et des guides."
+other = "Abonnez-vous pour recevoir nos prochains articles, des exemples et des guides."
 
 [field_firstname]
 other = "Prénom"
 
+[field_name]
+other = "Nom"
+
 [field_email]
 other = "Adresse Email"
+
+[learnmore]
+other = "Détails"
+
+[contactme]
+other = "Me Contacter"

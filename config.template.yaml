@@ -1,0 +1,31 @@
+params:
+  analytics:
+    google: "ga-code"
+  seo:
+    description: ""
+    keywords: [some, keywords]
+  cover: ""
+  favicon: ""
+
+title: ""
+
+author:
+  twitter:
+
+taxonomies:
+  category: categories
+  tag: tags
+
+# params.seo.description > params.description > site.params.seo.description
+# params.seo.keywords > site.params.seo.keywords
+# params.seo.title > params.title > site.params.seo.title > .site.title
+
+# articles:
+#   title: ""
+#   SEO:
+#     Description: "the description"
+#     Keywords: [some, keywords]
+#   cover
+
+# statics:
+# /favicon.png

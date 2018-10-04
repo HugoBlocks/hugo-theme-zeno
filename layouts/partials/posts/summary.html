@@ -1,0 +1,24 @@
+<div itemscope itemtype="http://schema.org/CreativeWork" class="{{ .Section }} content">
+
+{{/*{{ with .Param "tags" }}*/}}
+{{/*{{ range . }}*/}}
+{{/*{{ $name := . }}*/}}
+{{/*{{ with $.Site.GetPage (printf "/tags/%s" $name) }}*/}}
+{{/*<a href="{{ .Permalink }}" title="{{ $name }}">{{ $name }}</a>*/}}
+{{/*{{ end }}*/}}
+{{/*{{ end }}*/}}
+{{/*{{ end }}*/}}
+
+
+    <h2 itemprop="headline">
+        <a href="{{ .Permalink }}">
+        {{ .Title }}
+        </a>
+    </h2>
+    <p itemprop="description">
+    {{ .Description }}
+    </p>
+    <a href="{{ .Permalink }}">
+    {{ i18n "readmore" }}
+    </a>
+</div>

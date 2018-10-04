@@ -1,0 +1,66 @@
+// Custom Colors
+// =============
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Quicksand|Vollkorn:400,400i,600');
+
+$font-family-base: 'Vollkorn', serif;
+$headings-font-family: 'Vollkorn', serif;
+
+$font-family-base: 'Quicksand', sans-serif;
+$headings-font-family: 'EB Garamond', serif;
+
+@import "./colors.scss";
+
+// Required
+// ========
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Optional
+// ========
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/grid";
+@import "bootstrap/buttons";
+@import "bootstrap/jumbotron";
+@import "bootstrap/card";
+@import "bootstrap/forms";
+@import "bootstrap/badge";
+@import "bootstrap/alert";
+@import "bootstrap/utilities/flex";
+@import "bootstrap/utilities/text";
+@import "bootstrap/utilities/spacing";
+@import "bootstrap/utilities/display";
+
+// Are you missing a component import? uncomment:
+// TODO: broken navbar, miss an import
+@import "bootstrap/bootstrap";
+
+// Custom Design
+// =============
+html {
+}
+
+body {
+  background: url("/pattern.png") repeat;
+  scroll-behavior: smooth;
+}
+
+@import "./header";
+@import "./footer";
+@import "./landing";
+@import "./posts";
+@import "./post";
+@import "./pagination";
+
+#references {
+  a {
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+

@@ -1,0 +1,23 @@
+{{ with .content }}
+<div id="references" class="jumbotron light jumbotron-fluid">
+    <div class="container">
+        <h2>{{ .title }}</h2>
+        <div class="row align-items-center justify-content-center">
+            {{ $references := .items }}
+
+            {{ range $i, $e := $references }}
+            {{ $references_count := $e | len }}
+            <div class="col-4 col-sm-3 col-md-2">
+                <a href="{{ .url }}" target="_blank">
+                    <img src="{{ .image }}"
+                         alt="icon depicting {{ $e.heading }}"
+                         class="img-fluid"
+                         alt="{{ .name }}"
+                    />
+                </a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

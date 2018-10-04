@@ -1,20 +1,16 @@
 {{/* Sync with _default/list.html too! */}}
 
 {{ define "main" }}
-<div class="blog">
-    <div class="content-wrapper white-bg">
-        <div class="marged marged-top">
-        {{ partial "navbar" . }}
-        </div>
-    </div>
+{{ partial "components/header.html" . }}
 
-{{ partial "blog/hero" . }}
+<div class="posts">
+{{ partial "posts/hero" . }}
 
     <div class="content-wrapper white-bg">
         <div class="marged">
             <div class="container-fluid">
                 <section class="main">
-                {{ partial "blog/posts" . }}
+                {{ partial "posts/posts" . }}
                 </section>
             </div>
         </div>

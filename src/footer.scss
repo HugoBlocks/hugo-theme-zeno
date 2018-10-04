@@ -1,0 +1,24 @@
+@import "bootstrap/_grid";
+@import "bootstrap/utilities/_flex";
+@import "bootstrap/utilities/_text";
+@import "./utils";
+
+.footer {
+  @extend .container;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+
+  .links {
+    @extend .row;
+    @extend .text-center;
+    @extend .justify-content-center;
+
+    .link {
+      @extend .col-2;
+
+      a {
+        @extend .large-link;
+      }
+    }
+  }
+}

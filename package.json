@@ -2,19 +2,18 @@
   "name": "hugo-theme-zeno",
   "version": "0.0.1",
   "private": true,
-  "description": "compile sass for bootstrap",
-  "main": "index.js",
+  "description": "Hugo theme: Explo, build tools (bootstrap, sass)",
   "scripts": {
-    "build": "node-sass-chokidar --source-map true ./src -o ./static/css/",
+    "build": "node-sass-chokidar --source-map true ./src/zeno.scss -o ./static/css/",
     "watch": "chokidar 'src/**/*.scss' -c 'npm run build'"
   },
   "author": "lsenta",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "bootstrap": "^4.1.2",
+    "bootstrap": "^4.1.3",
     "chokidar": "^2.0.4",
-    "chokidar-cli": "^1.2.0",
-    "node-sass-chokidar": "^1.3.0"
+    "chokidar-cli": "^1.2.1",
+    "node-sass-chokidar": "^1.3.3"
   }
 }

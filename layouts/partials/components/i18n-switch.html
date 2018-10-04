@@ -1,7 +1,7 @@
 {{ if .IsTranslated }}
 {{ range .Translations }}
-<a class="nav-link translation" href="{{ .Permalink }}">
-    {{ i18n .Lang | safeHTML }}
+<a class="translation" href="{{ .Permalink }}">
+{{ i18n .Lang }}
 </a>
 {{ end}}
 {{ end }}

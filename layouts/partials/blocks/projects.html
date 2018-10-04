@@ -1,0 +1,33 @@
+{{ with .content }}
+<div id="features" class="container">
+    <h2>
+        {{ .title }}
+    </h2>
+
+    <div class="card-columns">
+
+        {{ range $i, $e := .items }}
+        {{ $count := $e | len }}
+        <div class="card {{ if not .alwaysVisible }}d-none d-md-inline-block{{ end }}">
+            <div class="card-body">
+                <h3 class="card-title">{{ .heading }}</h3>
+                <p class="card-text tagline">{{ .tagline }}</p>
+            </div>
+
+            {{ with .techs }}
+            <div class="pictos card-footer">
+                <p>
+                    {{ range $j, $p := . }}
+                    <span class="badge badge-pill badge-primary">
+                        {{ $p }}
+                    </span>
+                    {{ end }}
+                </p>
+            </div>
+            {{ end }}
+
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
