@@ -20,17 +20,12 @@
   }
 
   .hero {
-    @extend .container-fluid;
-    @extend .invert;
+    @extend .container;
 
     min-height: 63vh;
+    margin-top: 6vh;
     position: relative;
-    padding-top: 10rem;
     padding-bottom: 5rem;
-
-    @extend %cover;
-    background-image: url('/landing/hero-cover.jpg');
-    background-origin: border-box;
 
     .content {
       @extend .row;
@@ -38,7 +33,13 @@
       @extend .text-center;
 
       .pic {
-        display: none;
+        @extend .col-12;
+
+        img {
+          @extend .img-fluid;
+          max-width: 400px;
+          max-height: 127px;
+        }
       }
 
       .intro {
@@ -185,8 +186,7 @@
     @extend .container-fluid;
     @extend .invert;
     margin-bottom: 0;
-    margin-top: 0;
-
+    margin-top: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
 
