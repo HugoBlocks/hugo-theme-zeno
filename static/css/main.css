@@ -3797,6 +3797,9 @@ a.btn-circle {
 .footer {
   margin-top: 4rem;
   margin-bottom: 2rem; }
+  .footer .copyright {
+    text-align: center;
+    color: #FFF; }
 
 .align-baseline {
   vertical-align: baseline !important; }
@@ -5980,7 +5983,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.img-fluid, .landing .hero .content .pic img, .landing .features .items .item img, .landing .references .items .item img {
+.img-fluid, .landing .hero .content .pic img, .landing .features .items .item img, .landing .offers > div .items .item img, .landing .references .items .item img {
   max-width: 100%;
   height: auto; }
 

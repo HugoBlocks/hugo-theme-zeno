@@ -182,6 +182,10 @@
             font-family: $font-family-base;
           }
 
+          img {
+            @extend .img-fluid;
+          }
+
           .tagline {
             @extend .text-secondary;
           }
