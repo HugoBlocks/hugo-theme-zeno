@@ -80,6 +80,7 @@
           @extend .d-none;
           @extend .d-md-block;
         }
+
         .lead-3 {
           @extend .d-none;
           @extend .d-lg-block;
@@ -200,7 +201,7 @@
           .action {
             @extend .btn;
             @extend .btn-secondary;
-            @extend .push-down-wrapper;
+            @extend .push-down-wrapper-and-center;
           }
         }
       }
@@ -213,6 +214,7 @@
           color: $secondary;
           opacity: 0.5;
         }
+
         p {
 
         }
@@ -223,6 +225,7 @@
   .references {
     @extend .jumbotron;
     @extend .jumbotron-fluid;
+    margin-bottom: 0;
 
     h2 {
       color: $dark;
